@@ -11,11 +11,13 @@ const availableCommands = {
     '/squad': 'Get SQUAD price',
     '/mvg': 'Get MVG price',
     '/yeet': 'Get YEET price',
+    '/mva': 'Get MVA price',
     '/sha': 'Get SHA price',
     '/vtho': 'Get VTHO price',
     '/wov': 'Get WOV price',
     '/hai': 'Get HAI price',
     '/vex': 'Get VEX price',
+    '/sht': 'Get SHT price',
 };
 
 // Dictionary to store user IDs who have received the welcome message
@@ -42,6 +44,11 @@ bot.onText(/\/yeet/, (msg) => {
 });
 
 // Command to fetch SHA price
+bot.onText(/\/mva/, (msg) => {
+    getPriceForToken('MVA', '0xF640DE49e50Ae442b17305D0dA59a523d45746Ee', msg);
+});
+
+// Command to fetch SHA price
 bot.onText(/\/sha/, (msg) => {
     getPriceForToken('SHA', '0xa14A5bDD5AB3D51062c5B243a2e6Fb0949fee2F3', msg);
 });
@@ -53,7 +60,7 @@ bot.onText(/\/vtho/, (msg) => {
 
 // Command to fetch SHA price
 bot.onText(/\/wov/, (msg) => {
-    getPriceForToken('WOV', '0x226585F8FB83690b65b58A48571B74fb358f7663', msg);
+    getPriceForToken('WOV', '0xD86bed355d9d6A4c951e96755Dd0c3cf004d6CD0', msg);
 });
 
 // Command to fetch SHA price
@@ -64,9 +71,15 @@ bot.onText(/\/hai/, (msg) => {
 bot.onText(/\/mvg/, (msg) => {
     getPriceForToken('MVG', '0xa051Db301625039C0d5fd9a1F5A41fc57fE5a709', msg);
 });
+
 // Command to fetch SHA price
 bot.onText(/\/vex/, (msg) => {
-    getPriceForToken('VEX', '0xa0346DCDa7293970d18Ef2885f8fcb369F91F1Dc', msg);
+    getPriceForToken('VEX', '0x39cd888a1583498AD30E716625AE1a00ff51286D', msg);
+});
+
+// Command to fetch SHA price
+bot.onText(/\/sht/, (msg) => {
+    getPriceForToken('SHT', '0x91B1ed544A5492974eD5e2CC319506Df77B18409', msg);
 });
 
 // Function to fetch price for a token
