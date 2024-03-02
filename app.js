@@ -9,12 +9,12 @@ const bot = new TelegramBot(token, { polling: true });
 const availableCommands = {
     '/lion': 'Get LION price',
     '/vet': 'Get VET price',
+    '/vtho': 'Get VTHO price',
     '/squad': 'Get SQUAD price',
     '/mvg': 'Get MVG price',
     '/yeet': 'Get YEET price',
     '/mva': 'Get MVA price',
     '/sha': 'Get SHA price',
-    '/vtho': 'Get VTHO price',
     '/wov': 'Get WOV price',
     '/hai': 'Get HAI price',
     '/vex': 'Get VEX price',
@@ -35,6 +35,11 @@ bot.onText(/\/VET/, (msg) => {
 });
 
 // Command to fetch SHA price
+bot.onText(/\/vtho/, (msg) => {
+    getPriceForToken('VTHO', '0x2B6fC877fF5535b50f6C3e068BB436b16EC76fc5', msg);
+});
+
+// Command to fetch SHA price
 bot.onText(/\/mvg/, (msg) => {
     getPriceForToken('MVG', '0xa051Db301625039C0d5fd9a1F5A41fc57fE5a709', msg);
 });
@@ -52,11 +57,6 @@ bot.onText(/\/mva/, (msg) => {
 // Command to fetch SHA price
 bot.onText(/\/sha/, (msg) => {
     getPriceForToken('SHA', '0xa14A5bDD5AB3D51062c5B243a2e6Fb0949fee2F3', msg);
-});
-
-// Command to fetch SHA price
-bot.onText(/\/vtho/, (msg) => {
-    getPriceForToken('VTHO', '0x2B6fC877fF5535b50f6C3e068BB436b16EC76fc5', msg);
 });
 
 // Command to fetch SHA price
