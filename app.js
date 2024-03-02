@@ -8,6 +8,7 @@ const bot = new TelegramBot(token, { polling: true });
 // Dictionary to store available commands and their descriptions
 const availableCommands = {
     '/lion': 'Get LION price',
+    '/vet': 'Get VET price',
     '/squad': 'Get SQUAD price',
     '/mvg': 'Get MVG price',
     '/yeet': 'Get YEET price',
@@ -29,8 +30,8 @@ bot.onText(/\/lion/, (msg) => {
 });
 
 // Command to fetch SHA price
-bot.onText(/\/squad/, (msg) => {
-    getPriceForToken('SQUAD', '0xb3E3eD92334b52b1Bf0E48d6D07BA4b7822081e5', msg);
+bot.onText(/\/VET/, (msg) => {
+    getPriceForToken('WVET', '0x2B6fC877fF5535b50f6C3e068BB436b16EC76fc5', msg);
 });
 
 // Command to fetch SHA price
