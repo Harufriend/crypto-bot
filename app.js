@@ -31,7 +31,7 @@ bot.onText(/\/lion/, (msg) => {
 
 // Command to fetch SHA price
 bot.onText(/\/VET/, (msg) => {
-    getPriceForToken('WVET', '0x2B6fC877fF5535b50f6C3e068BB436b16EC76fc5', msg);
+    getPriceForToken('WVET', '0x6c33A10d32aC466c324F23A949cC3F4B70AF4513', msg);
 });
 
 // Command to fetch SHA price
