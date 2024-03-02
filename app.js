@@ -74,10 +74,6 @@ bot.onText(/\/wov/, (msg) => {
 bot.onText(/\/hai/, (msg) => {
     getPriceForToken('HAI', '0x2a0455D09c38c22824aD5225e0B56bD1D2D31561', msg);
 });
-// Command to fetch SHA price
-bot.onText(/\/mvg/, (msg) => {
-    getPriceForToken('MVG', '0xa051Db301625039C0d5fd9a1F5A41fc57fE5a709', msg);
-});
 
 // Command to fetch SHA price
 bot.onText(/\/vex/, (msg) => {
