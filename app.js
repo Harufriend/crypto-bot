@@ -40,6 +40,12 @@ bot.onText(/\/vtho/, (msg) => {
 });
 
 // Command to fetch SHA price
+bot.onText(/\/squad/, (msg) => {
+    getPriceForToken('SQUAD', '0xb3E3eD92334b52b1Bf0E48d6D07BA4b7822081e5', msg);
+});
+
+
+// Command to fetch SHA price
 bot.onText(/\/mvg/, (msg) => {
     getPriceForToken('MVG', '0xa051Db301625039C0d5fd9a1F5A41fc57fE5a709', msg);
 });
