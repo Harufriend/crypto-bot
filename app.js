@@ -8,11 +8,13 @@ const bot = new TelegramBot(token, { polling: true });
 // Dictionary to store available commands and their descriptions
 const availableCommands = {
     '/lion': 'Get LION price',
+    '/squad': 'Get SQUAD price',
+    '/mvg': 'Get MVG price',
+    '/yeet': 'Get YEET price',
     '/sha': 'Get SHA price',
     '/vtho': 'Get VTHO price',
     '/wov': 'Get WOV price',
     '/hai': 'Get HAI price',
-    '/mvg': 'Get MVG price',
     '/vex': 'Get VEX price',
 };
 
@@ -22,6 +24,21 @@ const welcomedUsers = {};
 // Command to fetch LION price
 bot.onText(/\/lion/, (msg) => {
     getPriceForToken('LION', '0x476C75cC7F264eb5960545Daa0B60be38487478E', msg);
+});
+
+// Command to fetch SHA price
+bot.onText(/\/squad/, (msg) => {
+    getPriceForToken('SQUAD', '0xb3E3eD92334b52b1Bf0E48d6D07BA4b7822081e5', msg);
+});
+
+// Command to fetch SHA price
+bot.onText(/\/mvg/, (msg) => {
+    getPriceForToken('MVG', '0xa051Db301625039C0d5fd9a1F5A41fc57fE5a709', msg);
+});
+
+// Command to fetch SHA price
+bot.onText(/\/yeet/, (msg) => {
+    getPriceForToken('YEET', '0x516eCA119f673f6747c81189Bef4F14367c0c2B7', msg);
 });
 
 // Command to fetch SHA price
@@ -43,12 +60,10 @@ bot.onText(/\/wov/, (msg) => {
 bot.onText(/\/hai/, (msg) => {
     getPriceForToken('HAI', '0x2a0455D09c38c22824aD5225e0B56bD1D2D31561', msg);
 });
-
 // Command to fetch SHA price
 bot.onText(/\/mvg/, (msg) => {
     getPriceForToken('MVG', '0xa051Db301625039C0d5fd9a1F5A41fc57fE5a709', msg);
 });
-
 // Command to fetch SHA price
 bot.onText(/\/vex/, (msg) => {
     getPriceForToken('VEX', '0xa0346DCDa7293970d18Ef2885f8fcb369F91F1Dc', msg);
