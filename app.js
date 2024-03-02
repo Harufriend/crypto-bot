@@ -2,7 +2,7 @@ const TelegramBot = require('node-telegram-bot-api');
 const https = require('https');
 
 // replace the value below with the Telegram token you receive from @BotFather
-const token = '6548876844:AAEdEGFAztjrmFq3W4WW7lD8ZvJJJf5-z5c';
+const token = '7148753151:AAGfnGuOsOD9_Ru-eI9bl_nCEEJrFZn89Kg';
 const bot = new TelegramBot(token, { polling: true });
 
 // Dictionary to store available commands and their descriptions
